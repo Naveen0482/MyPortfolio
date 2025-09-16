@@ -1,0 +1,136 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f5f8fa;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(90deg, #0078D7 0%, #00BCD4 100%);
+    color: #fff;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* Navigation bar styles */
+nav {
+    margin: 1rem 0 0.5rem 0;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 1.1rem;
+    padding: 0.3em 1em;
+    border-radius: 24px;
+    transition: background 0.2s;
+}
+nav a:hover, nav a:active {
+    background: rgba(255,255,255,0.16);
+}
+
+/* Main content */
+main {
+    flex: 1; /* Let it expand to fill */
+    max-width: 700px;
+    background: #fff;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* Headings and typography */
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+p, ul, li {
+    margin-bottom: 0.75rem;
+    font-size: 1.08rem;
+}
+
+/* Lists */
+ul {
+    padding-left: 1.3rem;
+}
+
+/* Section profile image styling */
+main img[alt="Profile photo"] {
+    display: block;
+    margin: 0 auto 1.2rem auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 123, 215, 0.3);
+}
+
+/* Buttons and links */
+a.button, a[href$=".pdf"] {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #0078D7;
+    color: #fff !important;
+    padding: 0.6em 1.2em;
+    border-radius: 22px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+a.button:hover, a[href$=".pdf"]:hover {
+    background: #005f9e;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background: #282c34;
+    color: #fff;
+    padding: 1.2rem 0 1rem 0;
+    font-size: 0.98rem;
+    letter-spacing: 0.2px;
+}
+/* Button hover and scaling effect */
+a.button, a[href$=".pdf"] {
+    transition: background 0.2s, transform 0.2s;
+}
+a.button:hover, a[href$=".pdf"]:hover {
+    background: #005f9e;
+    transform: scale(1.04);
+}
+
+/* Profile image hover "pop" (optional) */
+main img[alt="Profile photo"]:hover {
+    filter: brightness(1.12);
+    transform: scale(1.08) rotate(-2deg);
+    transition: filter 0.2s, transform 0.25s;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 740px) {
+    main {
+        padding: 1.2rem;
+        margin: 1rem;
+    }
+    header {
+        padding: 1.2rem 0 0.5rem 0;
+    }
+}
